@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .tv-btn-gradient {
+    background: linear-gradient(135deg, #1e53e5 0%, #2962ff 50%, #9047ff 100%);
+  }
+  .tv-btn-gradient:hover {
+    opacity: 0.94;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(8, 153, 129, 0.2); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(242, 54, 69, 0.2); }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: flashGreen 1s ease-out;
+}
+
+.flash-down {
+  animation: flashRed 1s ease-out;
+}
